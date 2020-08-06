@@ -318,8 +318,8 @@ pub mod lucet_result {
                                 reason: lucet_terminated_reason::Remote,
                                 provided: std::ptr::null_mut(),
                             },
-                            TerminationDetails::AwaitNeedsAsync => lucet_terminated {
-                                reason: lucet_terminated_reason::AwaitNeedsAsync,
+                            TerminationDetails::BlockOnNeedsAsync => lucet_terminated {
+                                reason: lucet_terminated_reason::BlockOnNeedsAsync,
                                 provided: std::ptr::null_mut(),
                             },
                             TerminationDetails::OtherPanic(p) => lucet_terminated {
@@ -382,7 +382,7 @@ pub mod lucet_result {
         BorrowError,
         Provided,
         Remote,
-        AwaitNeedsAsync,
+        BlockOnNeedsAsync,
         OtherPanic,
     }
 
